@@ -1,3 +1,170 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary colors */
+  --clr-primary-1: hsl(0, 36%, 70%);
+  --clr-primary-2: hsl(0, 93%, 68%);
+
+  /* Neutral Colors */
+  --clr-primary-3: hsl(0, 6%, 24%);
+
+  /* Gradients for the button */
+  --clr-primary-4: hsl(0, 0%, 100%);
+  --clr-primary-5: hsl(0, 100%, 98%);
+  --clr-primary-6: hsl(0, 80%, 86%);
+  --clr-primary-7: hsl(0, 74%, 74%);
+
+  /* primary font family*/
+  --ff-primary: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--ff-primary);
+}
+
+img {
+  width: 100%;
+  /* height is usually in pixel based on how many you want */
+  display: block;
+}
+
+.page {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  /* min-height: 100vh; */
+  width: 375px;
+  height: 850px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 103px 290px 520px;
+  background-color: var(--clr-primary-5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  width: 30%;
+  margin-left: 40px;
+}
+
+.woman_desktop {
+  display: none;
+  /* opacity: 1;
+  z-index: 10;
+  position: relative; */
+}
+
+.content {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.title span {
+  color: var(--clr-primary-1);
+  font-weight: 300;
+}
+
+.title h1 {
+  color: var(--clr-primary-3);
+}
+
+.text {
+  text-align: center;
+  margin: 2rem 1.3rem;
+  line-height: 1.4rem;
+  color: var(--clr-primary-1);
+}
+
+#emails {
+  border: 1px solid var(--clr-primary-1);
+  width: 20rem;
+  height: 3rem;
+  border-radius: 25px;
+  outline: none;
+  padding: 12px 20px;
+  background-color: var(--clr-primary-5);
+}
+
+::placeholder {
+  color: var(--clr-primary-1);
+  opacity: 0.5;
+}
+
+.email_address {
+  position: relative;
+}
+
+.submit {
+  height: 3rem;
+  background-image: linear-gradient(
+    135deg,
+    var(--clr-primary-6),
+    var(--clr-primary-7)
+  );
+  width: 60px;
+  border-radius: 25px;
+  border-style: none;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  top: 0;
+}
+
+.submit-active {
+  transform: scaleX(1.2);
+  background-image: linear-gradient(
+    135deg,
+    var(--clr-primary-5),
+    var(--clr-primary-6)
+  );
+}
+
+.arrow {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-icon {
+  position: absolute;
+  width: 5%;
+  top: 22.5%;
+  right: 75px;
+  opacity: 0;
+}
+
+.error-message {
+  padding-top: 10px;
+  padding-left: 25px;
+  font-size: 12px;
+  color: var(--clr-primary-2);
+  opacity: 0;
 }

@@ -34,7 +34,7 @@
     />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -42,19 +42,75 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
-    <footer>
+    <main>
+      <div class="page">
+        <div class="container">
+          <header>
+            <div class="logo">
+              <img src="src/img/logo.svg" alt="mobile logo" />
+            </div>
+          </header>
+          <figure>
+            <div class="woman_mobile">
+              <img src="src/img/hero-mobile.jpg" alt="mobile woman" />
+            </div>
+            <div class="woman_desktop">
+              <img src="src/img/hero-desktop.jpg" alt="desktop woman" />
+            </div>
+          </figure>
+
+          <summary>
+            <div class="content">
+              <div class="title">
+                <h1>
+                  <span>We're</span><br />
+                  coming soon
+                </h1>
+              </div>
+              <div class="text">
+                Hello fellow shoppers! We're currently building our new fashion
+                store. Add your email below to stay up-to-date with
+                announcements and our launch deals.
+              </div>
+              <div class="email_address">
+                <form id="form">
+                  <input
+                    required
+                    type="email"
+                    name="emails"
+                    id="emails"
+                    placeholder="Email Address"
+                  />
+                  <button class="submit">
+                    <img
+                      class="arrow"
+                      src="src/img/icon-arrow.svg"
+                      alt="arrow icon"
+                    />
+                  </button>
+                </form>
+
+                <img class="error-icon" src="src/img/icon-error.svg" alt="" />
+                <div class="error-message">
+                  <p>Please provide a valid email</p>
+                </div>
+              </div>
+            </div>
+          </summary>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
 </html>

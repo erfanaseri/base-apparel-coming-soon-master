@@ -42,12 +42,11 @@ img {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .container {
   display: grid;
-  /* min-height: 100vh; */
   width: 375px;
   height: 850px;
   grid-template-columns: 1fr;
@@ -68,9 +67,9 @@ img {
 
 .woman_desktop {
   display: none;
-  /* opacity: 1;
+  opacity: 1;
   z-index: 10;
-  position: relative; */
+  position: relative;
 }
 
 .content {
@@ -87,7 +86,7 @@ img {
   font-size: 1.4rem;
 }
 
-.title span {
+.we-are {
   color: var(--clr-primary-1);
   font-weight: 300;
 }
@@ -167,4 +166,78 @@ img {
   font-size: 12px;
   color: var(--clr-primary-2);
   opacity: 0;
+}
+
+/* Desktop design */
+@media screen and (min-width: 1440px) {
+  .page {
+    display: block;
+  }
+
+  .container {
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-template-columns: auto 714.5px;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+      "a b"
+      "c b";
+    background-image: url(../img/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  header {
+    grid-area: a;
+  }
+
+  summary {
+    grid-area: c;
+  }
+
+  .woman_mobile {
+    display: none;
+  }
+
+  .woman_desktop {
+    display: block;
+    grid-area: b;
+    /* width: 100%; */
+  }
+
+  .logo {
+    padding: 0 15rem;
+  }
+
+  .logo img {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 5rem 15rem;
+    justify-items: left;
+    align-items: left;
+  }
+
+  .coming::after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
+    margin: 2rem 0;
+    line-height: 2rem;
+    padding-right: 17rem;
+  }
+
+  #emails {
+    width: 28rem;
+    background-color: transparent;
+  }
 }

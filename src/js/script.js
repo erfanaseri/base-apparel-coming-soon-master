@@ -1,4 +1,5 @@
 import { func } from "assert-plus";
+import Color from "color";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
@@ -21,19 +22,15 @@ btn.addEventListener("click", function (e) {
     emailInput.value = "";
     errorMessage.style.opacity = 1;
     iconError.style.opacity = 1;
+    emailInput.style.borderColor = "var(--clr-primary-2)";
+    emailInput.style.borderWidth = "2px";
     submit.classList.add("submit-active");
   } else {
     emailInput.value = "";
     errorMessage.style.opacity = 0;
     iconError.style.opacity = 0;
+    emailInput.style.borderColor = "var(--clr-primary-1)";
+    emailInput.style.borderWidth = "1px";
     submit.classList.remove("submit-active");
   }
-  //   console.log(!emailInput.validity.valid);
-  //   console.log(emailInput.checkValidity());
 });
-
-// input.addEventListener("invalid", function (e) {
-//   e.preventDefault();
-//   //   console.log(this.validity);
-//   input.setCustomValidity("My custom message");
-// });
